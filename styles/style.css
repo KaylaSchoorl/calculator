@@ -19,7 +19,8 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: rgba(7, 3, 3, 0.45)
+    text-color: (rosybrown);
 }
 
 main {
@@ -28,6 +29,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    background-color:rgba(7, 3, 3, 0.45);
 }
 
 section {
@@ -62,7 +64,7 @@ footer {
 
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
