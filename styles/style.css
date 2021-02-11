@@ -20,7 +20,6 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: rgba(7, 3, 3, 0.45)
-    text-color: (rosybrown);
 }
 
 main {
@@ -118,4 +117,13 @@ footer {
         transform: rotate3d(10, 10, 10, 50deg) scale(1);
     }
 
+  }
+  button {
+      border-radius: 20px;
+      background-color: black;
+      color: white;
+
+  }
+  input {
+      border-radius: 20px;
   }
