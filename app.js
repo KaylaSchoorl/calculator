@@ -1,34 +1,18 @@
-// import functions and grab DOM elements
+import { add, subtract, multiply, divide } from './utilities.js';
 
-// initialize state
+function initOperator(firstInputId, secondInputId, buttonId, resultsId, calculation) {
+    const input1 = document.getElementById(firstInputId);
+    const input2 = document.getElementById(secondInputId);
+    const button = document.getElementById(buttonId);
+    const display = document.getElementById(resultsId);
 
-// set event listeners to update state and DOM
+    button.addEventListener('click', () => {
+        const result = calculation(Number(input1.value), Number(input2.value));
+        display.textContent = result;
+    })
+}
 
-const additionNumberOne = document.getElementById('num1')
-const additionNumberTwo = document.getElementById('num2')
-const additionButton = document.getElementById('addition')
-const additionDisplay = document.getElementById('addition-display')
-additionButton.addEventListener('click', () => {
-    additionDisplay.textContent = Number(additionNumberOne.value) + Number(additionNumberTwo.value);
-})
-const subtractionNumberOne = document.getElementById('sub1')
-const subtractionNumberTwo = document.getElementById('sub2')
-const subtractionButton = document.getElementById('subtraction')
-const subtractionDisplay = document.getElementById('subtraction-display')
-subtractionButton.addEventListener('click', () => {
-    subtractionDisplay.textContent = Number(subtractionNumberOne.value) - Number(subtractionNumberTwo.value);
-})
-const divisionNumberOne = document.getElementById('div1')
-const divisionNumberTwo = document.getElementById('div2')
-const divisionButton = document.getElementById('division')
-const divisionDisplay = document.getElementById('division-display')
-divisionButton.addEventListener('click', () => {
-    divisionDisplay.textContent = Number(divisionNumberOne.value) / Number(divisionNumberTwo.value);
-})
-const multiplyNumberOne = document.getElementById('mul1')
-const multiplyNumberTwo = document.getElementById('mul2')
-const multiplyButton = document.getElementById('multiply')
-const multiplyDisplay = document.getElementById('multiply-display')
-multiplyButton.addEventListener('click', () => {
-    multiplyDisplay.textContent = Number(multiplyNumberOne.value) * Number(multiplyNumberTwo.value);
-})
+initOperator('num1', 'num2', 'addition', 'addition-display', add);
+initOperator('sub1', 'sub2', 'subtraction', 'subtraction-display', subtract);
+initOperator('div1', 'div2', 'division', 'division-display', divide);
+initOperator('mul1', 'mul2', 'multiply', 'multiply-display', multiply);
